@@ -21,6 +21,7 @@ pkg
 .rvmrc
 .rbenv-version
 .rbenv-gemsets
+.ruby-*
 
 ## PROJECT::SPECIFIC
 # for binstubs, since this gem has no executables
