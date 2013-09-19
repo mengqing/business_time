@@ -112,7 +112,9 @@ module BusinessTime
       end
     end
 
-    def business_time_until(to_time)
+    def business_time_until(to_time=nil)
+      to_time ||= Time.parse(self.strftime('%Y-%m-%d ') + BusinessTime::Config.end_of_workday)
+      
       # Make sure that we will calculate time from A to B "clockwise"
       if self < to_time
         time_a = self
